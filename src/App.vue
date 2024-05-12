@@ -10,6 +10,8 @@
     <Watch />
 
     <Directive />
+
+    <ClassBind />
 </template>
 
 <script>
@@ -19,6 +21,7 @@ import Computed from '~/components/Computed';
 import LifeCycleHook from '~/components/LifeCycleHook';
 import Watch from '~/components/Watch';
 import Directive from '~/components/Directive';
+import ClassBind from '~/components/ClassBind';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
@@ -30,6 +33,7 @@ export default {
         LifeCycleHook,
         Watch,
         Directive,
+        ClassBind,
     },
     // 사용할 데이터 명시
     data() {
