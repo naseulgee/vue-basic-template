@@ -1,12 +1,21 @@
 <template>
     <BasicBind />
-    
+
     <EventBind />
+
+    <Computed />
+
+    <LifeCycleHook />
+
+    <Watch />
 </template>
 
 <script>
 import BasicBind from '~/components/BasicBind';
 import EventBind from '~/components/EventBind';
+import Computed from '~/components/Computed';
+import LifeCycleHook from '~/components/LifeCycleHook';
+import Watch from '~/components/Watch';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
@@ -14,11 +23,35 @@ export default {
         //BasicBind: BasicBind // (O)
         BasicBind,             // (O)
         EventBind,
+        Computed,
+        LifeCycleHook,
+        Watch,
     },
     // 사용할 데이터 명시
     data() {
         return {
         }
+    },
+    // 계산하여 사용할 데이터 명시
+    computed: {
+    },
+    // 사용할 메서드 명시
+    methods: {
+    },
+    // 데이터가 변경될 때 동작할 메서드 명시
+    watch: {
+    },
+    beforeCreate() { // 컴포넌트 생성 및 초기화 후
+    },
+    created() {     // 데이터 생성 후
+    },
+    beforeMount() { // DOM 연결 전
+    },
+    mounted() {     // DOM 연결 후
+    },
+    beforeUpdate() { // 데이터 변경 후 렌더링 전
+    },
+    updated() {     // 데이터 변경 후 렌더링 후
     },
 }
 </script>
