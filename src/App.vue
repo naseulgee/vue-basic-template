@@ -8,6 +8,8 @@
     <LifeCycleHook />
 
     <Watch />
+
+    <Directive />
 </template>
 
 <script>
@@ -16,6 +18,7 @@ import EventBind from '~/components/EventBind';
 import Computed from '~/components/Computed';
 import LifeCycleHook from '~/components/LifeCycleHook';
 import Watch from '~/components/Watch';
+import Directive from '~/components/Directive';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
@@ -26,6 +29,7 @@ export default {
         Computed,
         LifeCycleHook,
         Watch,
+        Directive,
     },
     // 사용할 데이터 명시
     data() {
