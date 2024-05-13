@@ -1,5 +1,7 @@
 <template>
-    <!-- NOTE: :class="{속성값: 조건}"
+    <!-- NOTE: 클래스 바인딩
+        [참고] https://v3-docs.vuejs-korea.org/guide/essentials/class-and-style.html
+        -★:class="{속성값: 조건}"
         - 속성을 동적으로 전환 시 사용한다.
         - 조건 값이 true 일 경우에만 속성이 적용된다.
         - data 나 computed 에 선언된 객체 데이터를 연결할 수 도 있다.

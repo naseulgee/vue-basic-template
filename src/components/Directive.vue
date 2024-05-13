@@ -1,5 +1,7 @@
 <template>
     <!-- NOTE: 디랙티브
+        [참고] https://v3-docs.vuejs-korea.org/guide/essentials/conditional.html
+        [참고] https://v3-docs.vuejs-korea.org/guide/essentials/list.html
         조건: v-if / v-else-if / v-else, v-show
             - v-else-if 와 v-else 의 경우 v-if 바로 다음에 와야 인식된다.
             - v-if 의 경우 렌더링 작업을, v-show 의 경우 렌더링 후 스타일 작업을 한다.

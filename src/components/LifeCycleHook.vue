@@ -25,6 +25,7 @@ export default {
     },
 
     /** NOTE: 라이프사이클 훅
+     * [참고] https://v3-docs.vuejs-korea.org/guide/essentials/lifecycle.html
      * [이미지 참고] https://v3-docs.vuejs-korea.org/assets/lifecycle.d3fe54ca.png
      * [실행 순서]
      *  createApp().mount() : 컴포넌트 생성 및 컴포넌트를 HTML 구조에 연결 요청
