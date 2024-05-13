@@ -106,4 +106,15 @@ ul{
     margin-bottom: 0.1em;
     cursor: pointer;
 }
+input[type=text], select, textarea{
+    border: 1px solid #3c3c3c4a;
+    border-radius: 4px;
+    padding: .2em .6em;
+    background: #ffffff80;
+    font-size: 0.8em;
+    transition: background-color .5s;
+    &:focus {
+        outline: 1px solid royalblue;
+    }
+}
 </style>
