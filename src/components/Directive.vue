@@ -43,37 +43,53 @@
 
         <h2>반복</h2>
         <ul>
-            <li
-                v-for="fruit in fruits"
-                :key="fruit">
-                for-in : {{ fruit }}
+            <li>
+                <h3>for-in</h3>
+                <span
+                    v-for="fruit in fruits"
+                    :key="fruit">
+                    {{ fruit }} , 
+                </span>
             </li>
-            <li
-                v-for="(fruit, idx) in fruits"
-                :key="idx">
-                for-in (with index): {{ fruit }}, {{ idx }}
+            <li>
+                <h3>for-in (with index)</h3>
+                <span
+                    v-for="(fruit, idx) in fruits"
+                    :key="idx">
+                    ({{ idx }}) {{ fruit }} , 
+                </span>
             </li>
-            <li
-                v-for="fruit of fruits"
-                :key="fruit">
-                for-of : {{ fruit }}
+            <li>
+                <h3>for-of</h3>
+                <span
+                    v-for="fruit of fruits"
+                    :key="fruit">
+                    {{ fruit }} , 
+                </span>
             </li>
-            <li
-                v-for="(fruit, idx) of fruits"
-                :key="idx">
-                for-of (with index) : {{ fruit }}, {{ idx }}
+            <li>
+                <h3>for-of (with index)</h3>
+                <span
+                    v-for="(fruit, idx) of fruits"
+                    :key="idx">
+                    ({{ idx }}) {{ fruit }} , 
+                </span>
             </li>
-            <li
-                v-for="(fruit, idx) of newFruits"
-                :key="idx">
-                for-of 1 (with index) : {{ fruit }}, {{ idx }}
-                <ul>
-                    <li
-                        v-for="(value, key, i) of fruit"
-                        :key="value.id">
-                        for-of 2 (with index, key, value) : {{ i }}, {{ key }}, {{ value }}
-                    </li>
-                </ul>
+            <li>
+                <h3>for-of 1 (with index)</h3>
+                <h4>for-of 2 (with index, key, value)</h4>
+                <div
+                    v-for="(fruit, idx) of newFruits"
+                    :key="idx">
+                    ({{ idx }}) {{ fruit }}
+                    <ul>
+                        <li
+                            v-for="(value, key, i) of fruit"
+                            :key="value.id">
+                            ({{ i }}), {{ key }} : {{ value }}
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li>
                 <button
@@ -86,26 +102,24 @@
 
         <h2>조건 & 반복</h2>
         <ul>
-            <li v-if="fruits.length > 0">
-                <ul>
-                    <Fruit
-                        v-for="fruit in fruits"
-                        :key="fruit"
-                        :name="fruit">
-                        {{ fruit }}
-                    </Fruit>
-                </ul>
-            </li>
-            <li v-if="hasFruit">
-                <ul>
-                    <Fruit
-                        v-for="fruit in reverseFruit"
-                        :key="fruit"
-                        :name="fruit">
-                        {{ fruit }}
-                    </Fruit>
-                </ul>
-            </li>
+            <template v-if="fruits.length > 0">
+                <Fruit
+                    v-for="fruit in fruits"
+                    :key="fruit"
+                    :name="fruit">
+                    {{ fruit }}
+                </Fruit>
+            </template>
+        </ul>
+        <ul>
+            <template v-if="hasFruit">
+                <Fruit
+                    v-for="fruit in reverseFruit"
+                    :key="fruit"
+                    :name="fruit">
+                    {{ fruit }}
+                </Fruit>
+            </template>
         </ul>
     </section>
 </template>

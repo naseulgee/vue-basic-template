@@ -12,6 +12,8 @@
     <Directive />
 
     <ClassBind />
+
+    <FormBind />
 </template>
 
 <script>
@@ -22,6 +24,7 @@ import LifeCycleHook from '~/components/LifeCycleHook';
 import Watch from '~/components/Watch';
 import Directive from '~/components/Directive';
 import ClassBind from '~/components/ClassBind';
+import FormBind from '~/components/FormBind';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
@@ -34,6 +37,16 @@ export default {
         Watch,
         Directive,
         ClassBind,
+        FormBind,
+    },
+    // 전달받을 속성 정의
+    props: {
+        //속성의 옵션을 지정한다. boolean 타입을 제외하고 defualt와 required 둘 중 하나를 지정해줘야 한다.
+        // name: {
+            // type: String,    // 타입
+            // default: ""      // 기본값
+            //required: true // 필수 지정
+        // }
     },
     // 사용할 데이터 명시
     data() {
@@ -74,22 +87,31 @@ section {
     background-color: aliceblue;
     margin: 10px 20px;
     padding: 10px;
+    font-size: 50px;
+    line-height: 1.5;
+}
+@media (max-width: 800px) {
+    section {
+    font-size: 30px;
+}
 }
 h1 {
     margin: 0 20px;
-    font-size: 50px;
+    font-size: 1em;
 }
 h2 {
     margin: 15px 40px;
-    font-size: 40px;
+    font-size: .85em;
 }
 ul{
     margin: 15px 50px;
     li{
+
         list-style: inside;
-        font-size: 30px;
+        font-size: .7em;
         ul{
             li{
+                font-size: 1em;
                 color: orange;
             }
         }
@@ -106,13 +128,16 @@ ul{
     margin-bottom: 0.1em;
     cursor: pointer;
 }
-input[type=text], select, textarea{
+input:not([type=checkbox]):not([type=radio]), select, textarea{
     border: 1px solid #3c3c3c4a;
     border-radius: 4px;
     padding: .2em .6em;
     background: #ffffff80;
-    font-size: 0.8em;
+    font-size: .8em;
     transition: background-color .5s;
+    &[type=number]{
+        background: #ffffff;
+    }
     &:focus {
         outline: 1px solid royalblue;
     }
