@@ -14,6 +14,8 @@
     <ClassBind />
 
     <FormBind />
+
+    <ComponentEx />
 </template>
 
 <script>
@@ -25,6 +27,7 @@ import Watch from '~/components/Watch';
 import Directive from '~/components/Directive';
 import ClassBind from '~/components/ClassBind';
 import FormBind from '~/components/FormBind';
+import ComponentEx from '~/components/ComponentEx';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
@@ -38,16 +41,16 @@ export default {
         Directive,
         ClassBind,
         FormBind,
+        ComponentEx,
     },
+    // 속성 자동 맵핑을 원하지 않을 경우 false 로 설정. 기본값 true
+    inheritAttrs: true,
     // 전달받을 속성 정의
     props: {
-        //속성의 옵션을 지정한다. boolean 타입을 제외하고 defualt와 required 둘 중 하나를 지정해줘야 한다.
-        // name: {
-            // type: String,    // 타입
-            // default: ""      // 기본값
-            //required: true // 필수 지정
-        // }
     },
+    // 전달받을 이벤트 명을 명시
+    emits: [
+    ],
     // 사용할 데이터 명시
     data() {
         return {
