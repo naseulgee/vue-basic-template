@@ -18,6 +18,8 @@
     <ComponentEx />
 
     <ProvideEx />
+
+    <Refs />
 </template>
 
 <script>
@@ -31,6 +33,7 @@ import ClassBind from '~/components/ClassBind';
 import FormBind from '~/components/FormBind';
 import ComponentEx from '~/components/ComponentEx';
 import ProvideEx from '~/components/ProvideEx';
+import Refs from '~/components/Refs';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
@@ -46,6 +49,7 @@ export default {
         FormBind,
         ComponentEx,
         ProvideEx,
+        Refs,
     },
     // 속성 자동 맵핑을 원하지 않을 경우 false 로 설정. 기본값 true
     inheritAttrs: true,

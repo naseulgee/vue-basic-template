@@ -12,6 +12,7 @@
         {{ $attrs.class }}
     </button>
     <button
+        ref="btn"
         :class="$attrs.class"
         :style="$attrs.style">
         {{ $attrs.class }}
