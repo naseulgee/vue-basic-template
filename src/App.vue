@@ -16,6 +16,8 @@
     <FormBind />
 
     <ComponentEx />
+
+    <ProvideEx />
 </template>
 
 <script>
@@ -28,6 +30,7 @@ import Directive from '~/components/Directive';
 import ClassBind from '~/components/ClassBind';
 import FormBind from '~/components/FormBind';
 import ComponentEx from '~/components/ComponentEx';
+import ProvideEx from '~/components/ProvideEx';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
@@ -42,15 +45,10 @@ export default {
         ClassBind,
         FormBind,
         ComponentEx,
+        ProvideEx,
     },
     // 속성 자동 맵핑을 원하지 않을 경우 false 로 설정. 기본값 true
     inheritAttrs: true,
-    // 전달받을 속성 정의
-    props: {
-    },
-    // 전달받을 이벤트 명을 명시
-    emits: [
-    ],
     // 사용할 데이터 명시
     data() {
         return {
@@ -59,6 +57,20 @@ export default {
     // 계산하여 사용할 데이터 명시
     computed: {
     },
+    // 부모 컴포넌트에게 전달받을 속성 정의
+    props: {
+    },
+    // 부모 컴포넌트에게 전달받을 이벤트 명을 명시
+    emits: [
+    ],
+    // 자손 컴포넌트에 전달할 데이터를 명시
+    provide(){
+        return {
+        }
+    },
+    // 조상 컴포넌트에게 전달받을 데이터 명시
+    inject: [
+    ],
     // 사용할 메서드 명시
     methods: {
     },

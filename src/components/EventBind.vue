@@ -1,5 +1,5 @@
 <template>
-    <!-- NOTE: [참고] https://v3-docs.vuejs-korea.org/guide/essentials/event-handling.html#key-modifiers
+    <!-- NOTE: [참고] https://v3-docs.vuejs-korea.org/guide/essentials/event-handling.html
         v-on          : method 에 선언된 함수를 이벤트와 바인딩 시켜준다.
             -★@이벤트="함수명"       : v-on 생략 형태
             -★@[변수명]="함수명"     : 이벤트 부분 또한 동적으로 데이터를 전달받을 시 사용

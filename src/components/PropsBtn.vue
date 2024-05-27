@@ -1,5 +1,7 @@
 <template>
-    <!-- NOTE: props: 상위 컴포넌트에서 전달한 속성을 받아 데이터로 사용한다. -->
+    <!-- NOTE: props: 상위 컴포넌트에서 전달한 속성을 받아 데이터로 사용한다.
+        [참고] https://v3-docs.vuejs-korea.org/guide/components/props.html
+    -->
     <button
         class="btn"
         :class="{ large }"

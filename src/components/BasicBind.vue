@@ -1,6 +1,6 @@
 <template>
     <!-- NOTE: 템플릿 문법
-        [참고] https://v3-docs.vuejs-korea.org/guide/essentials/template-syntax.html#raw-html
+        [참고] https://v3-docs.vuejs-korea.org/guide/essentials/template-syntax.html
         {{  }}: 일반 텍스트 데이터 바인딩의 가장 기본 형태.
         v-html: 일반 텍스트가 아닌 HTML을 렌더링 시켜준다.
         v-once: 렌더링 시 한 번만 데이터가 반영이 되며, 데이터가 갱신되어도 변하지 않는다.

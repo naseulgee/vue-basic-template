@@ -8,15 +8,15 @@
                 - v-slot      : 하위 컴포넌트의 name이 일치하는 slot 태그와 바인딩 시켜준다.
                     -★#이름   : v-slot 축약형
             하위 컴포넌트
-                - prop        : 상위 컴포넌트에서 전달한 속성을 받아 데이터로 사용한다.
-                - slot        : 상위 컴포넌트에서 하위 컴포넌트 안에 작성한 HTML 코드를 렌더링한다.
+                - prop        : 상위 컴포넌트에서 전달한 속성을 받아 ★데이터로 사용한다.
+                - slot        : 상위 컴포넌트에서 하위 컴포넌트 안에 작성한 ★HTML 코드를 렌더링한다.
                 - inheritAttrs: 속성 자동 맵핑을 원하지 않을 경우 false 로 설정한다.
         상속 요소가 자동 맵핑되지 않을 때 관련 속성
             하위 컴포넌트
                 - inheritAttrs가 false 또는 하위 컴포넌트의 최상위 요소가 2개 이상일 때
-                - $attrs   : 전달한 속성을 적용시킬 수 있다.
+                - $attrs   : 전달한 ★속성을 적용시킬 수 있다.
                 - emits    : 전달한 이벤트 중 사용할 이벤트를 명시한다.
-                - $emit    : 전달한 이벤트를 적용시킬 수 있다.
+                - $emit    : 전달한 ★이벤트를 적용시킬 수 있다.
     -->
     <section>
         <h1>컴포넌트</h1>
@@ -31,6 +31,25 @@
             :cnt="123" />
         <PropsBtn
             large />
+
+        <h2>하위 컴포넌트의 최상위 요소가 2개 이상일 때</h2>
+        <ul>
+            <li>
+                <h3>$attrs</h3>
+                <AttrsBtn
+                    class="btn"
+                    style="font-weight: bold;" />
+            </li>
+            <li>
+                <h3>Emit</h3>
+                <EmitBtn
+                    @click="log"
+                    @some-event="log2"
+                    @change-msg="logMsg">
+                    Banana
+                </EmitBtn>
+            </li>
+        </ul>
 
         <h2>slot</h2>
         <SlotBtn />
@@ -53,25 +72,6 @@
                 <span>(B)</span>
             </template>
         </SlotBtn>
-
-        <h2>하위 컴포넌트의 최상위 요소가 2개 이상일 때</h2>
-        <ul>
-            <li>
-                <h3>$attrs</h3>
-                <AttrsBtn
-                    class="btn"
-                    style="font-weight: bold;" />
-            </li>
-            <li>
-                <h3>Emit</h3>
-                <EmitBtn
-                    @click="log"
-                    @some-event="log2"
-                    @change-msg="logMsg">
-                    Banana
-                </EmitBtn>
-            </li>
-        </ul>
     </section>
 </template>
 

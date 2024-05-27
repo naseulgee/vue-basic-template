@@ -1,5 +1,7 @@
 <template>
-    <!-- NOTE: [참고] https://v3-docs.vuejs-korea.org/guide/essentials/forms.html
+    <!-- NOTE:
+        [참고] https://v3-docs.vuejs-korea.org/guide/essentials/forms.html
+        [참고] https://v3-docs.vuejs-korea.org/guide/components/v-model.html
         단방향 바인딩: 값을 조회만 하거나, 저장만 하는 경우
       ★양방향 바인딩: 값을 조회, 저장을 동시에하는 경우
         - :value="변수명" @input="변수명 = $event.target.value"
