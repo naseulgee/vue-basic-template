@@ -181,6 +181,9 @@ git push origin master
 - TODO Highlight
 - Vue-Official
 
+## 코드 자동완성 파일 생성
+- ./vscode/**파일명.code-snippets** 생성 및 내용 입력
+
 ## Settings.json
 ```
 "workbench.colorTheme": "Dracula",
