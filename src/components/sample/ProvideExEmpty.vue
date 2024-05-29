@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import ProvideExInject from '~/components/ProvideExInject';
-import ProvideExProps from '~/components/ProvideExProps';
+import ProvideExInject from '~/components/sample/ProvideExInject';
+import ProvideExProps from '~/components/sample/ProvideExProps';
 
 export default {
     components: {

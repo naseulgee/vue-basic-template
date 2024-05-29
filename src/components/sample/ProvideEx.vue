@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import ProvideExEmpty from '~/components/ProvideExEmpty';
+import ProvideExEmpty from '~/components/sample/ProvideExEmpty';
 import { computed } from 'vue';
 
 export default {

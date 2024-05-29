@@ -125,7 +125,7 @@
 </template>
 
 <script>
-import Fruit from '~/components/Fruit';
+import Fruit from '~/components/sample/Fruit';
 import shortid from 'shortid';
 
 export default {

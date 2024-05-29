@@ -76,10 +76,10 @@
 </template>
 
 <script>
-import PropsBtn from '~/components/PropsBtn';
-import SlotBtn from '~/components/SlotBtn';
-import AttrsBtn from '~/components/AttrsBtn';
-import EmitBtn from '~/components/EmitBtn';
+import PropsBtn from '~/components/sample/PropsBtn';
+import SlotBtn from '~/components/sample/SlotBtn';
+import AttrsBtn from '~/components/sample/AttrsBtn';
+import EmitBtn from '~/components/sample/EmitBtn';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시

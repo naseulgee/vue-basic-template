@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import RefComponent from '~/components/Fruit'
-import ManyChildsComponet from '~/components/AttrsBtn'
+import RefComponent from '~/components/sample/Fruit'
+import ManyChildsComponet from '~/components/sample/AttrsBtn'
 
 export default {
     components: {
