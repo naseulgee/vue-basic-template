@@ -30,6 +30,7 @@ export default {
      * [실행 순서]
      *  createApp().mount() : 컴포넌트 생성 및 컴포넌트를 HTML 구조에 연결 요청
      *  변수, 라이프사이클 등 초기화
+     *  setup()             : 컴포지션 API 실행
      *  beforeCreate()
      *  선언한 데이터, 반응성 등이 만들어짐★
      *★created()           : -> 선언한 데이터 접근 가능

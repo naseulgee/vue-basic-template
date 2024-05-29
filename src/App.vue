@@ -20,6 +20,21 @@
     <ProvideEx />
 
     <Refs />
+
+    <OptionAPI
+        class="btn"
+        style="font-size: 1.5em; font-weight: bold;"
+        color="royalblue"
+        @hello="console.log('Hello OptionAPI')">
+        Option API
+    </OptionAPI>
+    <CompositionAPI
+        class="btn"
+        style="font-size: 1.5em; font-weight: bold;"
+        color="royalblue"
+        @hello="console.log('Hello CompositionAPI')">
+        Composition API
+    </CompositionAPI>
 </template>
 
 <script>
@@ -34,6 +49,8 @@ import FormBind from '~/components/FormBind';
 import ComponentEx from '~/components/ComponentEx';
 import ProvideEx from '~/components/ProvideEx';
 import Refs from '~/components/Refs';
+import CompositionAPI from '~/components/CompositionAPI';
+import OptionAPI from '~/components/OptionAPI';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
@@ -50,6 +67,8 @@ export default {
         ComponentEx,
         ProvideEx,
         Refs,
+        CompositionAPI,
+        OptionAPI,
     },
     // 속성 자동 맵핑을 원하지 않을 경우 false 로 설정. 기본값 true
     inheritAttrs: true,
@@ -81,6 +100,13 @@ export default {
     // 데이터가 변경될 때 동작할 메서드 명시
     watch: {
     },
+
+    // 컴포지션 API 선언부
+    setup(){
+        return { // 사용할 데이터와 메소드 명시
+        }
+    },
+    /* ================ 컴포넌트 생명주기 ================ */
     beforeCreate() { // 컴포넌트 생성 및 초기화 후
     },
     created() {     // 데이터 생성 후
