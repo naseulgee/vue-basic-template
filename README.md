@@ -34,6 +34,7 @@ npm i vue@next
 npm i -D vue-loader@next vue-style-loader @vue/compiler-sfc
 npm i -D file-loader
 npm i -D eslint eslint-plugin-vue babel-eslint
+npm i vue-router@4
 ```
 1. vue 패키지 설치
     - vue@next
@@ -53,12 +54,16 @@ npm i -D eslint eslint-plugin-vue babel-eslint
     - eslint-plugin-vue
     - babel-eslint
         : 안되면 @babel/eslint-parser
+5. vue-router 패키지 설치
+    - vue-router@4
 
 ## 파일 및 폴더 CUD
 1. src/App.vue
 2. ~~js~~/main.js -> src/main.js
 3. static/images -> src/assets
 4. src/components/HelloWorld.vue
+5. src/routes/index.js
+5. src/routes/Home.vue
 
 ## 설정 파일 수정 및 생성
 1. webpack.config.js
@@ -69,6 +74,7 @@ npm i -D eslint eslint-plugin-vue babel-eslint
 2. main.js
 3. App.vue
 4. HelloWorld.vue
+5. Home.vue
 </details>
 
 
