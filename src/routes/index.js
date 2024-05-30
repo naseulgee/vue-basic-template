@@ -1,4 +1,6 @@
-/** NOTE: 라우터를 이용해 페이지를 관리해 주는 구성 파일
+/** NOTE:
+ * [참고] https://router.vuejs.kr/installation
+ * 라우터를 이용해 페이지를 관리해 주는 구성 파일
  * 내보내지는 라우터 플러그인 -> main.js 에서 사용된다.
 */
 import { createRouter, createWebHashHistory } from 'vue-router'
