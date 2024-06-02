@@ -1,9 +1,19 @@
+// 폰트 설정
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@font-face {
+    font-family: 'DOSIyagiMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/DOSIyagiMedium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // NOTE: 부트스트랩 호출 전 변수값 재정의
 // ★ 순서가 중요하다
 // [참고] https://getbootstrap.com/docs/5.0/customize/sass/#variable-defaults
 
 // 변수 재정의
 $danger: salmon;
+$font-family-sans-serif: "DOSIyagiMedium", "Pixelify Sans", sans-serif;
 
 // 필수 모듈 호출
 @import "../../node_modules/bootstrap/scss/functions";
