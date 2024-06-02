@@ -5,7 +5,7 @@
 */
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
-import Sample from './Sample'
+import SampleRouter from './sample/sampleRouter'
 
 export default createRouter({
     /** history 값 종류
@@ -13,15 +13,20 @@ export default createRouter({
      * History: 서버 세팅이 필요함
      */
     history: createWebHashHistory(),
-    // 페이지를 배열로 관리한다
+    /** 매칭할 페이지를 배열로 관리한다
+     *★path     : 주소
+     *  alias    : 별칭 주소
+     *  redirect : 리다이렉트 주소
+     *★component: RouterView 태그에 보여줄 컴포넌트
+     *  children : 컴포넌트 내부의 RouterView 태그에 보여줄 컴포넌트
+     */
     routes: [
-        {
-            path: '/sample',  // 페이지 경로
-            component: Sample // 보여줄 컴포넌트
-        },
+        ...SampleRouter,
         {
             path: '/',
+            alias: '/home',
             component: Home
+            // children: [ { ... } ]
         },
     ]
 })

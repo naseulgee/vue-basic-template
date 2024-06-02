@@ -7,7 +7,7 @@
             기본값: router-link-active
     -->
     <nav>
-        <ul class="nav nav-pills nav-fill justify-content-center">
+        <ul class="nav nav-tabs">
             <li
                 class="nav-item"
                 v-for="navigation in navigations"
@@ -15,6 +15,7 @@
                 <RouterLink
                     class="nav-link"
                     active-class="active"
+                    v-if="navigation.name != null"
                     :to="navigation.href">
                     {{ navigation.name }}
                 </RouterLink>
@@ -24,20 +25,24 @@
 </template>
 
 <script>
+import sampleRouter from "~/routes/sample/sampleRouter.js"
 export default {
     data() {
         return {
-            navigations: [
-                {
-                    name: "Home",
-                    href: "/"
-                },
-                {
-                    name: "Sample",
-                    href: "/sample"
-                }
-            ]
         }
-    }
+    },
+    computed: {
+        navigations() {
+            return sampleRouter[0].children.map((route, i) => {
+                const obj = { name: null, href: null }
+                const path = route.path
+                if(i != 0) {
+                    obj.name = path.charAt(0).toUpperCase() + path.slice(1).replace("-and-", " & "),
+                    obj.href = path
+                }
+                return obj
+            })
+        }
+    },
 }
 </script>

@@ -1,74 +1,22 @@
 <template>
-    <BasicBind />
+    <br />
 
-    <EventBind />
-
-    <Computed />
-
-    <LifeCycleHook />
-
-    <Watch />
-
-    <Directive />
-
-    <ClassBind />
-
-    <FormBind />
-
-    <ComponentEx />
-
-    <ProvideEx />
-
-    <Refs />
-
-    <OptionAPI
-        class="btn"
-        style="font-size: 1.5em; font-weight: bold;"
-        color="royalblue"
-        @hello="console.log('Hello OptionAPI')">
-        Option API
-    </OptionAPI>
-    <CompositionAPI
-        class="btn"
-        style="font-size: 1.5em; font-weight: bold;"
-        color="royalblue"
-        @hello="console.log('Hello CompositionAPI')">
-        Composition API
-    </CompositionAPI>
+    <div
+        class="sample-container">
+        <Navigation />
+        <!-- NOTE: routes/index.js 에서 설정한 주소에 일치하는 컴포넌트가 그려진다. -->
+        <RouterView />
+    </div>
 </template>
 
 <script>
-import BasicBind from '~/components/sample/BasicBind';
-import EventBind from '~/components/sample/EventBind';
-import Computed from '~/components/sample/Computed';
-import LifeCycleHook from '~/components/sample/LifeCycleHook';
-import Watch from '~/components/sample/Watch';
-import Directive from '~/components/sample/Directive';
-import ClassBind from '~/components/sample/ClassBind';
-import FormBind from '~/components/sample/FormBind';
-import ComponentEx from '~/components/sample/ComponentEx';
-import ProvideEx from '~/components/sample/ProvideEx';
-import Refs from '~/components/sample/Refs';
-import CompositionAPI from '~/components/sample/CompositionAPI';
-import OptionAPI from '~/components/sample/OptionAPI';
+import Navigation from '~/components/sample/NavigationForSample';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시
     components: {
-        //BasicBind: BasicBind // (O)
-        BasicBind,             // (O)
-        EventBind,
-        Computed,
-        LifeCycleHook,
-        Watch,
-        Directive,
-        ClassBind,
-        FormBind,
-        ComponentEx,
-        ProvideEx,
-        Refs,
-        CompositionAPI,
-        OptionAPI,
+        //Navigation: Navigation // (O)
+        Navigation,              // (O)
     },
     // 속성 자동 맵핑을 원하지 않을 경우 false 로 설정. 기본값 true
     inheritAttrs: true,
@@ -127,8 +75,8 @@ export default {
     scoped: 스타일을 선언된 컴포넌트에서만 사용
     :deep: 자손 컴포넌트에서도 사용(권장되는 방식은 아님)
 -->
-<style lang="scss" scoped>
-section:deep {
+<style lang="scss">
+.sample-container > section {
     border-radius: 10px;
     background-color: aliceblue;
     margin: 10px 20px;
