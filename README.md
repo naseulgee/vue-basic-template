@@ -5,9 +5,22 @@
 ## 패키지 설치 및 세팅
 ```
 npm i -D shortid
+npm i bootstrap@v5.3.3
 ```
 1. 간단한 고유 id 생성 패키지 설치
     - shortid
+2. bootstrap 패키지 설치
+    - bootstrap@v5.3.3
+
+## 파일 및 폴더 CUD
+1. src/scss/main.scss
+
+## 설정 파일 수정 및 생성
+1. 
+
+### 파일 내용 수정
+1. main.scss
+2. App.vue
 </details>
 
 

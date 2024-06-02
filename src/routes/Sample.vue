@@ -125,66 +125,52 @@ export default {
 <!-- NOTE: CSS 속성
     lang: 전처리기 언어를 선언
     scoped: 스타일을 선언된 컴포넌트에서만 사용
+    :deep: 자손 컴포넌트에서도 사용(권장되는 방식은 아님)
 -->
-<style lang="scss">
-section {
+<style lang="scss" scoped>
+section:deep {
     border-radius: 10px;
     background-color: aliceblue;
     margin: 10px 20px;
     padding: 10px;
-    font-size: 50px;
+    font-size: calc(1.375rem + 0.85vw);
     line-height: 1.5;
-}
-@media (max-width: 800px) {
-    section {
-    font-size: 30px;
-}
-}
-h1 {
-    margin: 0 20px;
-    font-size: 1em;
-}
-h2 {
-    margin: 15px 40px;
-    font-size: .85em;
-}
-ul{
-    margin: 15px 50px;
-    li{
-
-        list-style: inside;
-        font-size: .7em;
-        ul{
-            li{
-                font-size: 1em;
-                color: orange;
+    ul{
+        li{
+            list-style: inside !important;
+            font-size: .7em;
+            ul{
+                li{
+                    font-size: 1em;
+                    color: orange;
+                }
             }
         }
     }
-}
-.btn{
-    display: inline-block;
-    padding: 3px 10px;
-    border: 1px solid salmon;
-    border-radius: 5px;
-    background-color: #fff;
-    color: salmon;
-    font-size: .8em;
-    margin-bottom: 0.1em;
-    cursor: pointer;
-}
-input:not([type=checkbox]):not([type=radio]), select, textarea{
-    border: 1px solid #3c3c3c4a;
-    border-radius: 4px;
-    padding: .2em .6em;
-    background: #ffffff80;
-    font-size: .8em;
-    transition: background-color .5s;
-    &[type=number]{
-        background: #ffffff;
+    .btn{
+        display: inline-block;
+        padding: 3px 10px;
+        border: 1px solid salmon;
+        border-radius: 5px;
+        background-color: #fff;
+        color: salmon;
+        font-size: .8em;
+        margin-bottom: 0.1em;
+        cursor: pointer;
     }
-    &:focus {
-        outline: 1px solid royalblue;
+    input:not([type=checkbox]):not([type=radio]), select, textarea{
+        border: 1px solid #3c3c3c4a;
+        border-radius: 4px;
+        padding: .2em .6em;
+        background: #ffffff80;
+        font-size: .8em;
+        transition: background-color .5s;
+        &[type=number]{
+            background: #ffffff;
+        }
+        &:focus {
+            outline: 1px solid royalblue;
+        }
     }
 }
 </style>
