@@ -6,11 +6,21 @@
 ```
 npm i -D shortid
 npm i bootstrap@v5.3.3
+npm i --save @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons
 ```
 1. 간단한 고유 id 생성 패키지 설치
     - shortid
 2. bootstrap 패키지 설치
     - bootstrap@v5.3.3
+3. fontawesome 패키지 설치
+    - @fortawesome/fontawesome-svg-core
+        : 코어
+    - @fortawesome/vue-fontawesome@latest-3
+        : Vue 파일 내부의 fontawesome 아이콘을 사용할 수 있도록 함
+    - @fortawesome/free-solid-svg-icons
+    - @fortawesome/free-regular-svg-icons
+    - @fortawesome/free-brands-svg-icons
+        : 무료 아이콘 형태 패키지 설치
 
 ## 파일 및 폴더 CUD
 1. src/scss/main.scss
