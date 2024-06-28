@@ -7,6 +7,7 @@
 npm i -D shortid
 npm i bootstrap@v5.3.3
 npm i --save @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons
+npm i axios
 ```
 1. 간단한 고유 id 생성 패키지 설치
     - shortid
@@ -21,6 +22,9 @@ npm i --save @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@late
     - @fortawesome/free-regular-svg-icons
     - @fortawesome/free-brands-svg-icons
         : 무료 아이콘 형태 패키지 설치
+4. axios 패키지 설치
+    - axios
+        : 네트워크 통신을 위한 패키지
 
 ## 파일 및 폴더 CUD
 1. src/scss/main.scss
