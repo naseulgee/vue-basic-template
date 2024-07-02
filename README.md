@@ -214,39 +214,7 @@ git push origin master
 - TODO Highlight
 - Vue-Official
 
-## 코드 자동완성 파일 생성
-- ./vscode/**파일명.code-snippets** 생성 및 내용 입력
-
-## Settings.json
-```
-"workbench.colorTheme": "Dracula",
-"editor.renderWhitespace": "all",
-"editor.tabSize": 4,
-"todohighlight.keywords": [
-    {
-        "text": "NOTE:",
-        "color": "#ffffff",
-        "backgroundColor": "deepskyblue",
-        "overviewRulerColor": "grey"
-    },
-    {
-        "text": "Vue:",
-        "color": "#ffffff",
-        "backgroundColor": "#42b883",
-        "overviewRulerColor": "grey"
-    },
-    {
-        "text": "★",
-        "color": "red",
-        "backgroundColor": "yellow",
-        "overviewRulerColor": "grey"
-    },
-],
-"[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
-},
-"editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-}
-```
+## 설정 파일 생성 및 내용 입력
+- ./vscode/**파일명.code-snippets** : 코드 자동완성 단축키 설정 파일
+- ./vscode/**settings.json** : 작업 환경 설정 파일
 </details>
