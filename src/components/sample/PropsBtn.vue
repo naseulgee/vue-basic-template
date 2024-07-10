@@ -18,7 +18,10 @@ export default {
             //속성의 옵션을 지정한다.
             // boolean 타입을 제외하고 defualt와 required 둘 중 하나를 지정해줘야 한다.
             type: String,    // 타입
-            default: "#fff"  // 기본값
+            default: "#fff"  // 기본값.
+                             //     - 참조형 데이터 {}, [] 등의 경우 데이터가 가변할 수 있기 때문에 직접 사용하지 않는다.
+                             //     - 함수로 반환하는 형태로 적어야 한다.
+                             //     - () => ({}) , function () { return [] }
             //required: true // 필수 지정
         },
         cnt: {
