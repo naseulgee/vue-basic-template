@@ -92,21 +92,15 @@ npm i axios vuex@next
 ## 파일 및 폴더 CUD
 1. src/App.vue
 2. ~~js~~/main.js -> src/main.js
-3. static/images -> src/assets
+3. static/images -> src/assets/images
 4. src/components/HelloWorld.vue
 5. src/routes/index.js
-5. src/routes/Home.vue
+6. src/views/Home.vue
+7. src/store/index.js
 
 ## 설정 파일 수정 및 생성
 1. webpack.config.js
 2. **.eslintrc.js**
-
-### 파일 내용 수정
-1. index.html
-2. main.js
-3. App.vue
-4. HelloWorld.vue
-5. Home.vue
 </details>
 
 

@@ -1,17 +1,17 @@
 /** NOTE: 샘플용 페이지 정의
  * 해당 파일은 /src/routers/index.js 에 import 되어 사용된다.
 */
-import Sample from './Sample'
-import Bind from './Bind';
-import LifeCycleWatch from './LifeCycleWatch';
-import Inherite from './Inherite';
-import OptionAndComposition from './OptionAndComposition';
+import Sample from '~/views/sample/Sample'
+import Bind from '~/views/sample/Bind';
+import LifeCycleWatch from '~/views/sample/LifeCycleWatch';
+import Inherite from '~/views/sample/Inherite';
+import OptionAndComposition from '~/views/sample/OptionAndComposition';
 import Directive from '~/components/sample/Directive';
 
 export default [
     {
         path: '/sample',
-        component: Sample,
+        component: Sample, // 부모 RouterView 에 컴포넌트 전달 ( App.vue > RouterView > /layouts/BasicLayout.vue )
         children: [
             {
                 path: '', // /sample 접속 시
@@ -19,7 +19,7 @@ export default [
             },
             {
                 path: 'bind',
-                component: Bind
+                component: Bind // 자식 RouterView 에 컴포넌트 전달 ( /layouts/BasicLayout.vue > /views/Sample.vue > RouterView )
             },
             {
                 path: 'lifecycle-and-watch',

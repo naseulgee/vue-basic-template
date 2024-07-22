@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Navigation from '~/components/sample/NavigationForSample';
+import Navigation from '~/components/common/NavigationForSample';
 
 export default {
     //현재 컴포넌트에서 사용할 컴포넌트 명시

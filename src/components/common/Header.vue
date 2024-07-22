@@ -35,6 +35,10 @@ export default {
                 {
                     name: "Sample",
                     href: "/sample"
+                },
+                {
+                    name: "Layout",
+                    href: "/layout"
                 }
             ]
         }

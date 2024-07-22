@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import sampleRouter from "~/routes/sample/sampleRouter.js"
+import sampleRouter from "~/routes/sampleRouter.js"
 export default {
     data() {
         return {
