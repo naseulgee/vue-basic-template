@@ -1,44 +1,6 @@
-# 📌 Vue 프로젝트 추가 설정
+<!-- start: ================================================================ -->
+# 📌 webpack 기반 vue로 전환
 <details open>
-<summary>접기/펼치기</summary>
-
-## 패키지 설치 및 세팅
-```
-npm i -D shortid
-npm i bootstrap@v5.3.3
-npm i --save @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons
-npm i lodash
-```
-1. 간단한 고유 id 생성 패키지 설치
-    - shortid
-2. bootstrap 패키지 설치
-    - bootstrap@v5.3.3
-3. fontawesome 패키지 설치
-    - @fortawesome/fontawesome-svg-core
-        : 코어
-    - @fortawesome/vue-fontawesome@latest-3
-        : Vue 파일 내부의 fontawesome 아이콘을 사용할 수 있도록 함
-    - @fortawesome/free-solid-svg-icons
-    - @fortawesome/free-regular-svg-icons
-    - @fortawesome/free-brands-svg-icons
-        : 무료 아이콘 형태 패키지 설치
-4. 중복 제거용 패키지 설치
-    - lodash
-
-## 파일 및 폴더 CUD
-1. src/scss/main.scss
-
-## 설정 파일 수정 및 생성
-1. 
-
-### 파일 내용 수정
-1. main.scss
-2. App.vue
-</details>
-
-
-# webpack 기반 vue로 전환
-<details>
 <summary>접기/펼치기</summary>
 
 ## 저장소 복사
@@ -74,8 +36,9 @@ npm i axios vuex@next
     - @vue/compiler-sfc
         : Vue 파일을 변환하여 브라우저에서 동작할 수 있는 형태로 만듦
 3. 파일 출력을 위한 패키지 설치
-    - file-loader
-        : 파일을 읽어 브라우저에 출력해줌
+    - ~~file-loader
+        : 파일을 읽어 브라우저에 출력해줌~~
+    - webpack 5 의 경우 file-loader 를 기본 포함한다.
 4. ESLint 패키지 설치
     - eslint
     - eslint-plugin-vue
@@ -89,21 +52,47 @@ npm i axios vuex@next
     - vuex@next
         : store 관리를 위한 패키지
 
-## 파일 및 폴더 CUD
-1. src/App.vue
-2. ~~js~~/main.js -> src/main.js
-3. static/images -> src/assets/images
-4. src/components/HelloWorld.vue
-5. src/routes/index.js
-6. src/views/Home.vue
-7. src/store/index.js
+### [옵션] 추가 패키지 설치 및 세팅
+```
+npm i -D shortid
+npm i bootstrap@v5.3.3
+npm i --save @fortawesome/fontawesome-svg-core @fortawesome/vue-fontawesome@latest-3 @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons
+npm i lodash
+```
+1. 간단한 고유 id 생성 패키지 설치
+    - shortid
+2. bootstrap 패키지 설치
+    - bootstrap@v5.3.3
+3. fontawesome 패키지 설치
+    - @fortawesome/fontawesome-svg-core
+        : 코어
+    - @fortawesome/vue-fontawesome@latest-3
+        : Vue 파일 내부의 fontawesome 아이콘을 사용할 수 있도록 함
+    - @fortawesome/free-solid-svg-icons
+    - @fortawesome/free-regular-svg-icons
+    - @fortawesome/free-brands-svg-icons
+        : 무료 아이콘 형태 패키지 설치
+4. 중복 제거용 패키지 설치
+    - lodash
 
 ## 설정 파일 수정 및 생성
 1. webpack.config.js
 2. **.eslintrc.js**
+3. ~~js~~/main.js -> src/main.js
+4. src/routes/index.js
+5. src/store/index.js
+
+## 파일 및 폴더 CUD
+1. src/App.vue
+2. src/layouts/BasicLayout.vue
+3. static/images  -> src/assets/images
+4. scss/main.scss -> src/assets/scss/main.scss
+5. src/views/Home.vue
 </details>
+<!-- end  : ================================================================ -->
 
 
+<!-- start: ================================================================ -->
 # [참고] webpack 기반 세팅
 <details>
 <summary>접기/펼치기</summary>
@@ -179,8 +168,10 @@ npm i -D @babel/core @babel/preset-env @babel/plugin-transform-runtime babel-loa
 3. .postcssrc.js 파일 내용 입력
 4. .babelrc.js 파일 내용 입력
 </details>
+<!-- end  : ================================================================ -->
 
 
+<!-- start: ================================================================ -->
 # [참고] Git
 <details>
 <summary>접기/펼치기</summary>
@@ -196,8 +187,10 @@ git commit -m "메세지"
 git push origin master
 ```
 </details>
+<!-- end  : ================================================================ -->
 
 
+<!-- start: ================================================================ -->
 # [참고] VSCode Settings
 <details>
 <summary>접기/펼치기</summary>
@@ -217,3 +210,4 @@ git push origin master
 - ./vscode/**파일명.code-snippets** : 코드 자동완성 단축키 설정 파일
 - ./vscode/**settings.json** : 작업 환경 설정 파일
 </details>
+<!-- end  : ================================================================ -->

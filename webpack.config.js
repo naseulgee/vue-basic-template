@@ -67,7 +67,33 @@ module.exports = {
             },
             {// Vue: 추가. 이미지 파일을 처리하는 설정
                 test: /\.(png|jpe?g|gif|svg|webp)$/,
-                use: "file-loader"
+                /** NOTE: webpack5 설정 사용 시
+                 * [참고] https://webpack.kr/guides/asset-modules/
+                 * webpack 5 의 경우 아래의 로더들을 기본 포함한다.
+                 *  - url-loader : 파일을 데이터 URI 형식으로 번들에 인라인을 추가할 때
+                 *  - raw-loader : 파일을 문자열로 연결할 때
+                 *  - file-loader: 파일을 출력할 때 내보낼 때
+                 * 
+                 * 추가된 로더들을 사용하기 위해 모듈 속성인 type 이 추가되었다.
+                 *  - asset          : url-loader
+                 *  - asset/inline   : url-loader
+                 *  - asset/source   : raw-loader
+                 *  - asset/resource : file-loader
+                 *  - javascript/auto: 이전 애셋 로더 사용 시
+                */
+                type: 'asset/resource',
+
+                /** NOTE: file-loader 사용 시
+                 * file-loader 업데이트 후 options 의 esModule 값이 true가 기본값이 되었는데, 이 경우 require 함수를 이용한 이미지 호출 시 [object Module] 로 리턴받게 된다.
+                 *  - require 함수 뒤 .defualt 를 붙여야 정상호출되는 상황이 발생하여 값을 false 로 세팅해야 한다.
+                 *  - ex) require(~assets/images/...jpg).defualt
+                 * background-img 로 사용 시, 컴포넌트의 style 영역에서는 제대로 호출되지 않아, template 영역에서 호출해야 한다.
+                */
+                // use: {
+                //     loader: 'file-loader',
+                //     options: { esModule: false, },
+                // },
+                // type: 'javascript/auto',
             },
         ]
     },
@@ -87,6 +113,6 @@ module.exports = {
     ],
     devServer: {
         host: "localhost",
-        port: 8080,
+        port: 8081,
     }
 }

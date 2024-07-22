@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~/scss/main";
+@import "~assets/scss/main";
 
 .sample-container > section {
     border-radius: 10px;
