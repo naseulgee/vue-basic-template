@@ -8,7 +8,10 @@
             <li
                 v-for="movie in movies"
                 :key="movie.imdbID">
-                {{ movie.Title }}
+                <RouterLink
+                    :to="`/dynamic-path/${movie.imdbID}`">
+                    {{ movie.Title }}
+                </RouterLink>
             </li>
         </ul>
     </section>

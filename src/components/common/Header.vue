@@ -12,8 +12,9 @@
                 class="nav-item"
                 v-for="navigation in navigations"
                 :key="navigation.name">
+                <!-- isMatch 의 값이 true 면 active 클래스가 추가된다 -->
                 <RouterLink
-                    class="nav-link"
+                    :class="['nav-link', { active: isMatch(navigation.path) }]"
                     active-class="active"
                     :to="navigation.href">
                     {{ navigation.name }}
@@ -37,10 +38,17 @@ export default {
                     href: "/sample"
                 },
                 {
-                    name: "Layout",
-                    href: "/layout"
-                }
+                    name: "Dynamic path",
+                    href: "/dynamic-path/tt4520988", // 기본 경로
+                    path: /^\/dynamic-path/, // /dynamic-path 로 시작하는 경로를 모두 일치시킴
+                },
             ]
+        }
+    },
+    methods: {
+        isMatch(path) { // 정규표현식을 인자로 전달 받는다
+            if(!path) return false
+            return path.test(this.$route.fullPath) // 정규표현식의 test 함수를 사용하여 포함여부 반환
         }
     }
 }

@@ -18,3 +18,8 @@ export default {
     }
 }
 </script>
+
+<!-- NOTE: 전역으로 적용되어야 하기 때문에 scoped를 명시하지 않는다. -->
+<style lang="scss">
+@import "~assets/scss/main";
+</style>

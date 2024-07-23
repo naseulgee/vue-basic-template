@@ -7,7 +7,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '~/views/Home'
 import SampleRouter from './sampleRouter'
-import SampleLayout from './sampleLayout'
+import SubLayout from '~/layouts/SubLayout'
+import StoreItem from '~/components/sample/StoreItem';
 
 export default createRouter({
     /** history 값 종류
@@ -25,13 +26,22 @@ export default createRouter({
      */
     routes: [
         ...SampleRouter,
-        ...SampleLayout,
         {
             path: '/',
             alias: '/home',
             component: Home,
             // children: [ { ... } ],
             // meta: { layout: SubLayout, },
+        },
+        {
+            /** NOTE: 동적 경로 매칭
+             * [참고] https://v3.router.vuejs.org/guide/essentials/dynamic-matching.html
+             * 동적 경로 사용 시 콜론(:) 뒤에 변수명을 적고, route의 params로 접근할 수 있다.
+             * ex) this.$route.params.변수명
+             */
+            path: '/dynamic-path/:id',
+            component: StoreItem,
+            meta: { layout: SubLayout, }, // RouterView 에 임의의 데이터로 레이아웃을 지정 후 컴포넌트는 레이아웃의 slot 에서 출력된다. ( App.vue > /layouts/SubLayout.vue > RouterView > slot)
         },
     ]
 })
