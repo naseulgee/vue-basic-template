@@ -97,26 +97,26 @@ export default {
                 })
             }
         },
-        async searchMovieWithId(context, payload){
+        async searchMovieWithId({ state, commit }, payload){
             try {
-                if(context.state.loading) return
+                if(state.loading) return
 
-                context.commit('updateState', {
-                    theMovie: {},
+                commit('updateState', {
+                    theMovie: {}, // 기존 영화 정보 비워주기
                     loading: true,
                 })
 
                 const res = await _fetchMovie(payload)
-                context.commit('updateState', {
+                commit('updateState', {
                     theMovie: res.data
                 })
             } catch (message) {
                 console.log(message)
-                context.commit('updateState', {
+                commit('updateState', {
                     theMovie: {},
                 })
             } finally {
-                context.commit('updateState', {
+                commit('updateState', {
                     loading: false,
                 })
             }
