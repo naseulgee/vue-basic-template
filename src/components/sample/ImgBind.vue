@@ -8,7 +8,7 @@
         <h2>기본 이미지 호출</h2>
         <ul>
             <li>
-                <img :src="require('~/assets/images/' + imgName)" />
+                <img :src="require('~/assets/images/common/' + imgName)" />
             </li>
         </ul>
         
@@ -16,7 +16,7 @@
         <ul class="bgImg">
             <li
                 class="inline"
-                :style="{background: `url(${require('~/assets/images/' + imgName)}) top left/contain no-repeat`}">
+                :style="{background: `url(${require('~/assets/images/common/' + imgName)}) top left/contain no-repeat`}">
             </li>
         </ul>
     </section>
