@@ -56,7 +56,16 @@ module.exports = {
                     "style-loader",
                     "css-loader",
                     "postcss-loader",
-                    "sass-loader"
+                    {
+                        /** NOTE: sass 처리 옵션 추가
+                         * [참고] https://github.com/webpack-contrib/sass-loader?tab=readme-ov-file#additionaldata
+                         * additionalData: sass 앞에 특정 코드 추가
+                         */
+                        loader: "sass-loader",
+                        options: {
+                            additionalData: "@import '~assets/scss/main';",
+                        },
+                    },
                 ]
             },
             {//js 파일을 처리하는 설정
