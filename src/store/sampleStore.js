@@ -10,6 +10,7 @@ export default {
     // 해당 js 파일이 모듈화 되어 사용됨을 선언
     namespaced: true,
     // 모듈에서 취급할 data
+    // ★호출(사용): this.$store.state.모듈명.함수명
     state     : () => {
         return {
             movies : [],
@@ -19,6 +20,7 @@ export default {
         }
     },
     // 계산된 데이터. computed와 유사
+    // ★호출(사용): this.$store.getters['모듈명/함수명', 전달 인수]
     getters   : {
         movieIds(state) { // state 내부 값을 사용 시 매개변수로 state를 받아야 한다.
             return state.movies.map(m => m.imdbID)
@@ -26,6 +28,7 @@ export default {
     },
     /** NOTE: state의 데이터를 수정 할 수 있다. (setter)
      * ★호출(사용): commit 으로 호출된다.
+     *  - this.$store.commit('모듈명/함수명', 전달 인수)
     */
     mutations : {
         resetMovies(state) {

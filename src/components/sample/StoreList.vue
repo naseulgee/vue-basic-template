@@ -31,8 +31,9 @@ export default {
          * store 에 등록된 데이터 및 함수들을 반복 사용 시 편하게 등록을 도와주는 함수
          * 
          * Helpers 종류
-         *★- mapState: computed 영역에서 사용되며, 자주 사용되는 편이다.
-         *  - mapGetters, mapMutations, mapActions: methods 영역에서 사용된다.
+         *  - mapState    , mapGetters: computed 영역에서 사용된다.
+         *     ★- mapState 가 가장 자주 사용되는 편이다.
+         *  - mapMutations, mapActions: methods 영역에서 사용된다.
          *      - 어디에서 참조되는 함수인지 헷갈리기 때문에 Helper들 보다 직접 호출이 선호된다.
          * 
          * Helpers 사용
