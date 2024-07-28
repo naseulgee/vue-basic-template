@@ -29,7 +29,13 @@
                 <Loader
                     v-if="imageLoading"
                     :size="3" />
-                <img :src="reqLoadImage(loadinImgName)" />
+                <img
+                    v-else-if="noImage"
+                    src="~/assets/images/common/404-img.jpg"
+                    alt="No Poster" />
+                <img
+                    v-else
+                    :src="reqLoadImage(loadinImgName)" />
             </li>
         </ul>
     </section>
@@ -46,14 +52,23 @@ export default {
             imgName: "logo.png",
             loadinImgName: "https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg",
             imageLoading: true,
+            noImage: false,
         }
     },
     methods: {
         // async await 를 이용한 방법
         async init(){
             const src = this.loadinImgName
-            await this.$loadImage(src)
-            this.imageLoading = false
+
+            try {
+                // 메모리상 이미지가 로딩이 완료될 때 까지 대기
+                await this.$loadImage(src)
+            } catch (error) { // 이미지가 없는 경우 예외처리
+                console.error(error)
+                this.noImage = true
+            } finally {
+                this.imageLoading = false // 로딩 종료
+            }
         },
         /** NOTE: then 을 이용한 방법
          * 이미지 로딩 여부와 관련 없이 src 값이 반환되어야 함으로,
@@ -61,10 +76,16 @@ export default {
         */
         reqLoadImage(url){
             this.$loadImage(url)
-                .then(() => {
-                    this.imageLoading = false
+                .then(() => { // 메모리상 이미지가 로딩이 완료될 때 까지 대기 후
                 })
-            return url
+                .catch(error => { // 이미지가 없는 경우 예외처리
+                    console.error(error)
+                    this.noImage = true
+                })
+                .finally(() => {
+                    this.imageLoading = false // 로딩 종료
+                })
+            return url // 대기와 상관 없이 사이즈 변환 주소 리턴
         }
     },
     mounted(){ // HTML 구조와 컴포넌트 연결 직후 바로 실행 (created는 DOM과 연결되지 않은 상태)

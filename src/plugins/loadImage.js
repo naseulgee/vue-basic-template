@@ -10,8 +10,8 @@
  */
 export default {
     install(app) { // app.use 에 전달되어 바로 작동한다
-        app.config.globalProperties.$loadImage = (src) => {
-            return new Promise((resolve) => {
+        app.config.globalProperties.$loadImage = src => {
+            return new Promise((resolve, reject) => {
                 // 메모리상 이미지 요소 생성 (DOM에 출력 안함)
                 const img = document.createElement('img')
                 img.src = src // 실제 이미지 주소 세팅
@@ -20,6 +20,10 @@ export default {
                 img.addEventListener('load', () => {
                     // 완료됨 외부로 전달
                     resolve()
+                })
+                img.addEventListener('error', () => {
+                    // 이미지 로드 실패 외부로 전달
+                    reject(`No Image :: [${src}]`)
                 })
             })
         }
