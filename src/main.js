@@ -11,7 +11,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 // fontawesome 컴포넌트
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // fontawesome 사용할 아이콘 명시
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons" // 전체 아이콘 등록
+import { far } from "@fortawesome/free-regular-svg-icons"
+library.add(fas, far);
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons" // 특정 아이콘만 꺼내서 사용 가능
 library.add(faChevronDown);
 
 createApp(App) //Root 컴포넌트 연결
