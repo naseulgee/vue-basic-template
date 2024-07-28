@@ -21,6 +21,28 @@
                 </RouterLink>
             </li>
         </ul>
+        <!-- NOTE: RouterLink 가 아닌 method를 활용한 이동
+            페이지 이동 전 추가 로직을 구동시킬 수 있다.
+            ★$router 객체가 가진 메소드를 이용하여 이동한다.
+        -->
+        <ul class="btn-wrap m-4 p-0 position-fixed end-0 bottom-0">
+            <li>
+                <button
+                    class="btn btn-outline-primary text-uppercase"
+                    @click="toBack">
+                    Go back
+                    <font-awesome-icon icon="fa-solid fa-reply" />
+                </button>
+            </li>
+            <li class="mt-2">
+                <button
+                    class="btn btn-primary text-uppercase"
+                    @click="toHome">
+                    Go home
+                    <font-awesome-icon icon="fa-solid fa-hand-point-right" />
+                </button>
+            </li>
+        </ul>
     </nav>
 </template>
 
@@ -49,7 +71,14 @@ export default {
         isMatch(path) { // 정규표현식을 인자로 전달 받는다
             if(!path) return false
             return path.test(this.$route.fullPath) // 정규표현식의 test 함수를 사용하여 포함여부 반환
-        }
+        },
+        // method를 활용한 이동
+        toBack() {
+            this.$router.back()
+        },
+        toHome() {
+            this.$router.push('/')
+        },
     }
 }
 </script>

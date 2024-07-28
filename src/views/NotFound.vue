@@ -4,7 +4,6 @@
             4
             <font-awesome-icon icon="fa-regular fa-face-dizzy" />
             4
-            <faFaceDizzy />
         </h1>
         <h2 class="errMsg m-0">
             Page Not Found
