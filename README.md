@@ -191,6 +191,36 @@ git push origin master
 
 
 <!-- start: ================================================================ -->
+# [참고] 배포
+<details>
+<summary>접기/펼치기</summary>
+
+## 배포 전 확인
+```
+npm i -g serve
+npm run build
+serve -s dist
+```
+
+## Netlify
+1. <a href="https://app.netlify.com/" target="_blank">사이트 접속</a>
+2. Sites > Add new site > Import an existing project 클릭
+3. Let’s deploy your project with… > Github 선택
+4. 레포지토리 선택
+5. 레포지토리가 없는 경우
+    - 하단 configure the Netlify app on Github 클릭
+    - GitHub에서 settings>Applications>Netlify configure 클릭
+6. 빌드 세팅
+    - Site name        : 사이트명 입력
+    - Branch to deploy : 배포용 브런치 선택
+    - Build command    : `CI= npm run build` 입력
+    - Publish directory: dist (webpack.config.js output 설정 참고. 기본값 dist)
+7. Deploys > 배포여부 확인 (`Published` 라벨)
+</details>
+<!-- end  : ================================================================ -->
+
+
+<!-- start: ================================================================ -->
 # [참고] VSCode Settings
 <details>
 <summary>접기/펼치기</summary>
