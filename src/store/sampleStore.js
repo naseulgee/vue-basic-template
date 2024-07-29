@@ -6,6 +6,9 @@
 import axios from 'axios'
 import _uniqBy from 'lodash/uniqBy'
 
+// 내부 변수 선언
+const _defaultMessage = '검색해 주세요.'
+
 export default {
     // 해당 js 파일이 모듈화 되어 사용됨을 선언
     namespaced: true,
@@ -14,7 +17,7 @@ export default {
     state     : () => {
         return {
             movies : [],
-            message: '검색해 주세요.',
+            message: _defaultMessage,
             loading: false,
             theMovie: {},
         }
@@ -33,6 +36,8 @@ export default {
     mutations : {
         resetMovies(state) {
             state.movies = []
+            state.message = _defaultMessage
+            state.loading = false
         },
         updateState(state, payload) {
             for (const key in payload) {

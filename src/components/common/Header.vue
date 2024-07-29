@@ -5,6 +5,9 @@
         from        : 현재 페이지
         active-class: 클릭시 활성화되는 클래스를 지정한다.
             기본값: router-link-active
+
+        $route : 페이지 정보 속성을 가지는 객체(fullPath, params, ...)
+        $router: 페이지 조작을 위한 메소드를 가지는 객체(push, back, ...)
     -->
     <nav>
         <ul class="nav nav-pills nav-fill justify-content-center">

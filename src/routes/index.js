@@ -17,6 +17,16 @@ export default createRouter({
      * History: 서버 세팅이 필요함
      */
     history: createWebHashHistory(),
+
+    /** NOTE: 페이지 이동 시 스크롤 처리
+     * [참고] https://router.vuejs.kr/guide/advanced/scroll-behavior.html
+     * 매개변수로 to, from, savedPosition 를 받는다.
+     * 세번째 매개변수인 savedPosition 은 뒤로/앞으로 버튼에 의해 트리거된인 경우에만 사용 가능하다.
+     */
+    scrollBehavior() {
+        return { top: 0 }
+    },
+
     /** 매칭할 페이지를 배열로 관리한다
      *★path     : 주소
      *  alias    : 별칭 주소
