@@ -30,7 +30,7 @@
                     v-if="imageLoading"
                     :size="3" />
                 <img
-                    v-else-if="noImage"
+                    v-if="noImage"
                     src="~/assets/images/common/404-img.jpg"
                     alt="No Poster" />
                 <img
