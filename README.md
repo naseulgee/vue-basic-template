@@ -101,6 +101,7 @@ npm i lodash
 ```
 npm init -y
 npm i -D webpack webpack-cli webpack-dev-server@next html-webpack-plugin
+npm i -D dotenv-webpack
 npm i -D copy-webpack-plugin
 npm i -D css-loader style-loader sass-loader sass postcss autoprefixer postcss-loader
 npm i -D @babel/core @babel/preset-env @babel/plugin-transform-runtime babel-loader
@@ -113,10 +114,11 @@ npm i -D @babel/core @babel/preset-env @babel/plugin-transform-runtime babel-loa
         : 개발 서버 오픈 시 수정한 코드를 바로 반영하여 볼 수 있도록 함
     - html-webpack-plugin
         : main.js 파일에 index.html 삽입하여 개발 서버를 오픈하게함
-3. 파일 복사를 위한 패키지 설치(이미지 등)
+3. 환경변수를 사용하기 위한 패키지 설치
+4. 파일 복사를 위한 패키지 설치(이미지 등)
     - copy-webpack-plugin
         : 지정한 폴더 및 패턴과 일치하는 파일을 빌드 시 복사하여 확인 가능하게 함
-4. CSS, SCSS를 위한 패키지 설치
+5. CSS, SCSS를 위한 패키지 설치
     - sass-loader
         : scss 파일을 웹팩에서 읽게 함
     - sass
@@ -131,7 +133,7 @@ npm i -D @babel/core @babel/preset-env @babel/plugin-transform-runtime babel-loa
         : js에서 css 파일을 해석하게 함
     - style-loader
         : css 파일을 html에 삽입하게 함
-5. JS를 위한 Babel 패키지 설치
+6. JS를 위한 Babel 패키지 설치
     - babel-loader
         : js 파일을 웹팩에서 읽게 함
     - @babel/core

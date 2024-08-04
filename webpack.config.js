@@ -11,6 +11,7 @@
  * - NodeJS: module.export = {}
  */
 const path = require("path")
+const Dotenv = require("dotenv-webpack")
 const HtmlPlugin = require("html-webpack-plugin")
 const CopyPlugin = require("copy-webpack-plugin")
 const { VueLoaderPlugin } = require("vue-loader") // Vue: 추가
@@ -108,6 +109,7 @@ module.exports = {
     },
     //번들링 후 결과물의 처리 방식 등 다양한 플러그인들을 설정
     plugins: [
+        new Dotenv(),
         new HtmlPlugin({
             template: "./index.html"
         }),
