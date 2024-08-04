@@ -195,14 +195,31 @@ git push origin master
 <details>
 <summary>접기/펼치기</summary>
 
-## 배포 전 확인
+## 패키지 설치 및 세팅
 ```
-npm i -g serve
-npm run build
-serve -s dist
+npm i -D serve
+    npm run build
+    serve -s dist
+npm i -D netlify-cli
 ```
+1. 로컬 서버 패키지 설치
+    - serve
+    1) `dist` 폴더에 서버 배포용 파일 생성 (webpack.config.js output 설정 참고. 기본값 dist)
+    2) 로컬 서버 오픈
+2. Netlify 서버용 CLI 설치
+    - netlify-cli
+        : Netlify 의 기능을 로컬에서 사용할 수 있다
 
-## Netlify
+## Netlify 서버리스 함수 세팅
+- <a href="https://docs.netlify.com/functions/overview/#default-deployment-options" target="_blank">서버리스 함수 기본 옵션 바로가기</a>
+1. netlify.toml 파일 생성
+2. package.json 파일 수정
+    - scripts 부분에 `"dev:netlify": "netlify dev"` 추가
+3. netlify.toml 파일의 functions 부분에 명시한 폴더 생성
+4. 서버리스 함수명의 파일 생성
+    - 서버리스 함수 실행 요청 경로: `/.netlify/functions/파일명`
+
+## Netlify 배포
 1. <a href="https://app.netlify.com/" target="_blank">사이트 접속</a>
 2. Sites > Add new site > Import an existing project 클릭
 3. Let’s deploy your project with… > Github 선택
@@ -214,7 +231,7 @@ serve -s dist
     - Site name        : 사이트명 입력
     - Branch to deploy : 배포용 브런치 선택
     - Build command    : `CI= npm run build` 입력
-    - Publish directory: dist (webpack.config.js output 설정 참고. 기본값 dist)
+    - Publish directory: `dist` 빌드 폴더 입력
 7. Deploys > 배포여부 확인 (`Published` 라벨)
 </details>
 <!-- end  : ================================================================ -->
