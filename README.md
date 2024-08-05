@@ -221,6 +221,11 @@ npm i -D netlify-cli
 4. 서버리스 함수명의 파일 생성
     - 서버리스 함수 실행 요청 경로: `/.netlify/functions/파일명`
 
+## Netlify 환경변수 세팅
+1. Site configuration > Environment variables 클릭
+2. Add a variable 버튼 클릭
+3. .env 파일 내용대로 Key, Values 값 입력
+
 ## Netlify 배포
 1. <a href="https://app.netlify.com/" target="_blank">사이트 접속</a>
 2. Sites > Add new site > Import an existing project 클릭
