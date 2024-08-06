@@ -6,7 +6,8 @@ module.exports = {
     // 코드가 동작할(검사할) 환경 명시
     env: {
         browser: true,
-        node: true
+        node: true,
+        jest: true,
     },
     // 검사할 규칙 명시
     extends: [
