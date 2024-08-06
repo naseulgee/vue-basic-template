@@ -18,12 +18,17 @@ module.exports = {
     ],
     // JS DOM 환경에 대한 URL 설정
     // testURL: 'http://localhost', // jest v28 부터 testURL 속성이 testEnvironmentOptions.url 로 변경
+    testEnvironment: "jsdom",
     testEnvironmentOptions: {
-        url: "http://localhost/"
+        url: "http://localhost/",
+        customExportConditions: [
+            "node",
+            "node-addons"
+        ]
     },
     // 정규식과 일치하는 파일의 변환 모듈 지정
     transform: {
-        '^.+\\.vue$': 'vue-jest',
+        '^.+\\.vue$': '@vue/vue3-jest',
         '^.+\\.js$': 'babel-jest',
     },
 }

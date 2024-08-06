@@ -237,16 +237,18 @@ npm i lodash
 
 ## 패키지 설치 및 세팅
 ```
-npm i -D jest @vue/test-utils@next vue-jest@next babel-jest
+npm i -D jest@latest @vue/test-utils@next @vue/vue3-jest babel-jest@29.7 jest-environment-jsdom
 npm i -D
 ```
 1. Unit 테스트 패키지 설치
-    - jest
+    - jest@latest
         : 단위 테스트 프레임워크
+        : @latest 또는 29 이상의 버전을 설치해야 함
     - @vue/test-utils@next
-    - vue-jest@next
+        : vue 컴포넌트 테스트 프레임워크
+    - @vue/vue3-jest
         : vue 파일을 변환하여 동작하게 함
-    - babel-jest
+    - babel-jest@29.7
         : js 파일 변환하여 동작하게 함
 2. E2E 테스트 패키지 설치
 
