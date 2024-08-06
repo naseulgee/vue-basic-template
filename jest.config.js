@@ -13,11 +13,14 @@ module.exports = {
     },
     // 제외 모듈 경로
     modulePathIgnorePatterns: [
-        '<rootDir>/node_modules',
+        // '<rootDir>/node_modules',
         '<rootDir>/dist',
     ],
     // JS DOM 환경에 대한 URL 설정
-    testURL: 'http://localhost',
+    // testURL: 'http://localhost', // jest v28 부터 testURL 속성이 testEnvironmentOptions.url 로 변경
+    testEnvironmentOptions: {
+        url: "http://localhost/"
+    },
     // 정규식과 일치하는 파일의 변환 모듈 지정
     transform: {
         '^.+\\.vue$': 'vue-jest',
