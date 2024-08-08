@@ -9,11 +9,14 @@ module.exports = {
     // 경로 별칭 매핑
     moduleNameMapper: {
         // <rootDir> 토큰을 통해 루트 경로를 참조할 수 있다
-        '^~/(.*)$': '<rootDir>/src/$1'
+        '^~/(.*)$': '<rootDir>/src/$1',
+        // 정적 파일 매칭
+        '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js',
+        '\\.(s?css|less)$': 'identity-obj-proxy',
     },
     // 제외 모듈 경로
     modulePathIgnorePatterns: [
-        // '<rootDir>/node_modules',
+        '<rootDir>/node_modules',
         '<rootDir>/dist',
     ],
     // JS DOM 환경에 대한 URL 설정

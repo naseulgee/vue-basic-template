@@ -16,6 +16,7 @@
  *                  plugins   : [ 플러그인 ]: 플러그인을 설치한다
  *                  mixins    : [ 믹스인 ]  : 믹스인을 등록한다
  *                  mocks     : { 속성 }    : store, router 속성의 모의 등록한다
+ *                  stubs     : [ 컴포넌트 ]: 컴포넌트를 모의 등록한다
  *              }
  *  - wrapper
  *      - wrapper 속성
