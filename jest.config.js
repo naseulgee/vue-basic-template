@@ -12,7 +12,7 @@ module.exports = {
         '^~/(.*)$': '<rootDir>/src/$1',
         // 정적 파일 매칭
         '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js',
-        '\\.(s?css|less)$': 'identity-obj-proxy',
+        '\\.(s?css|less)$': '<rootDir>/__mocks__/styleMock.js', // 정상 처리를 원할 시 identity-obj-proxy 패키지 할당
     },
     // 제외 모듈 경로
     modulePathIgnorePatterns: [

@@ -250,8 +250,9 @@ npm i -D
         : vue 파일을 변환하여 동작하게 함
     - babel-jest@29.7
         : js 파일 변환하여 동작하게 함
-    - identity-obj-proxy
-        : 정적 파일에 대한 처리
+    - [옵션] identity-obj-proxy
+        : 스타일 파일에 대한 처리
+        : 모의 파일로 대체 시 설치할 필요가 없다
 2. E2E 테스트 패키지 설치
 
 ## 설정 파일 생성 및 수정
@@ -280,6 +281,7 @@ npm i -D
 2. test/unit
 3. test/e2e or unit/테스트할 파일 경로/테스트 파일.test.js
 4. \__mocks\__/fileMock.js
+5. \__mocks\__/styleMock.js
 </details>
 <!-- end  : ================================================================ -->
 
