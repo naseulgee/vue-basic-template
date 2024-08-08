@@ -31,4 +31,5 @@ module.exports = {
         '^.+\\.vue$': '@vue/vue3-jest',
         '^.+\\.js$': 'babel-jest',
     },
+    verbose: true,
 }
