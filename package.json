@@ -35,7 +35,7 @@
     "netlify-cli": "^17.33.5",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
-    "sass": "^1.76.0",
+    "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
     "serve": "^14.2.3",
     "shortid": "^2.2.16",
