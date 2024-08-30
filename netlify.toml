@@ -11,7 +11,7 @@
 [dev]
     framework  = "#custom"      # 감지할 프로젝트 유형 명시. (#custom: 앱 서버 및 'targetPort' 옵션을 실행)
     command    = "npm run dev:webpack"
-    targetPort = 8079           # Netlify 서버에 연결할 프로젝트 개발 서버 포트 명시
-    port       = 8080           # 브라우저에 출력할 Netlify 서버 포트 명시
+    targetPort = 8071           # Netlify 서버에 연결할 프로젝트 개발 서버 포트 명시
+    port       = 8072           # 브라우저에 출력할 Netlify 서버 포트 명시
     publish    = "dist"
     autoLaunch = false          # Netlify 서버가 준비되면 자동으로 브라우저 오픈 여부 지정

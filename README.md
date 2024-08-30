@@ -237,7 +237,8 @@ npm i lodash
 
 ## 패키지 설치 및 세팅
 ```
-npm i -D jest@latest @vue/test-utils@next @vue/vue3-jest babel-jest@29.7 jest-environment-jsdom identity-obj-proxy
+npm i -D jest@latest @vue/test-utils@next @vue/vue3-jest babel-jest@29.7 jest-environment-jsdom
+npm i -D identity-obj-proxy
 npm i -D
 ```
 1. Unit 테스트 패키지 설치
