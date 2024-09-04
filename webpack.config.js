@@ -124,6 +124,6 @@ module.exports = {
     ],
     devServer: {
         host: "localhost",
-        port: 8071,
+        port: 8071, // Netlify 설정으로 8080 에서 변경
     }
 }

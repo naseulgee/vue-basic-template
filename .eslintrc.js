@@ -8,7 +8,11 @@ module.exports = {
         browser: true,
         node: true,
         jest: true,
+        'cypress/globals': true
     },
+    plugins: [
+        'cypress'
+    ],
     // 검사할 규칙 명시
     extends: [
         // Vue. Vue.js 전용 코드 검사 규칙 3개중 1택 하여 사용

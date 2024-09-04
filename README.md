@@ -225,13 +225,13 @@ npm i lodash
 ### Unit Test
 - 단위(Unit) 테스트란 프로그램 최소 단위들이 독립적으로 정상 동작하는지 확인하는 방법
 - 데이터(상태), 함수(메소드), 컴포넌트 등
-- 로직을 검증하는 코드 위주의 테스트
+- **로직을 검증**하는 코드 위주의 테스트
 - 프레임워크
     - Jest
     - Vue Test Utils
 ### E2E Test
-- E2E(End to End) 테스트란 처음부터 끝까지 실제 사용자의 관점에서 사용 흐름을 테스트하는 방법
-- 화면 위주의 테스트
+- E2E(End to End) 테스트란 처음부터 끝까지 실제 사용자의 관점에서 사용 **흐름**을 테스트하는 방법
+- 화면 위주의 시나리오 테스트
 - 프레임워크
     - Cypress
 
@@ -239,7 +239,7 @@ npm i lodash
 ```
 npm i -D jest@latest @vue/test-utils@next @vue/vue3-jest babel-jest@29.7 jest-environment-jsdom
 npm i -D identity-obj-proxy
-npm i -D
+npm i -D cypress eslint-plugin-cypress
 ```
 1. Unit 테스트 패키지 설치
     - jest@latest
@@ -255,17 +255,25 @@ npm i -D
         : 스타일 파일에 대한 처리
         : 모의 파일로 대체 시 설치할 필요가 없다
 2. E2E 테스트 패키지 설치
+    - cypress
+        : E2E 테스트 프레임워크
+    - eslint-plugin-cypress
+        : es lint 에서 cypress 문법 에러가 발생하지 않도록 함
 
 ## 설정 파일 생성 및 수정
 1. jest.config.js
-2. 
+2. cypress.config.js
 3. .eslintrc.js 파일 내용 수정
 ```
     env: {
         browser: true,
         node: true,
         jest: true,
+        'cypress/globals': true
     },
+    plugins: [
+        'cypress'
+    ],
 ```
 4. package.json 파일 내용 수정
 ```
@@ -273,7 +281,9 @@ npm i -D
     "dev": "netlify dev",
     "dev:webpack": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
-    "test:unit": "jest --watchAll"
+    "test:unit": "jest --watchAll",
+    "test:unit:silent": "jest --watchAll --silent",
+    "test:e2e": "cypress open"
 },
 ```
 
