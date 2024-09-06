@@ -19,6 +19,10 @@ module.exports = {
         '<rootDir>/node_modules',
         '<rootDir>/dist',
     ],
+    // 테스트를 적용할 파일 지정
+    testMatch: [
+        "<rootDir>/test/unit/**/*.test.(js|jsx|ts|tsx)",
+    ],
     // JS DOM 환경에 대한 URL 설정
     // testURL: 'http://localhost', // jest v28 부터 testURL 속성이 testEnvironmentOptions.url 로 변경
     testEnvironment: "jsdom",

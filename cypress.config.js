@@ -18,14 +18,15 @@ module.exports = defineConfig({
     // downloadsFolder  : 'cypress/downloads',
     fixturesFolder   : false, // 비활성화 시 false 값 입력. (cypress/fixtures)
     // screenshotsFolder: 'cypress/screenshots', // cy.screenshot() 명령에서 스크린샷을 저장하거나 테스트가 실패한 후 스크린샷이 저장된다
+    // video            : false, // 테스트시 각 파일에 대한 영상을 녹화. 활성화 시 true 값 입력
     // videosFolder     : 'cypress/videos',
 
     // 테스트 화면 설정
     // viewportHeight: 660,
     // viewportWidth : 1000,
     e2e: {
-        baseUrl: 'localhost:8080', // cy.visit(), cy.request() 명령 실행 시 기본적으로 접근할 주소
-        specPattern: 'test/e2e/**/*.cy.js', // 테스트 할 파일 경로 지정. (cypress/e2e/**/*.cy.{js,jsx,ts,tsx})
+        baseUrl: 'http://localhost:8072', // cy.visit(), cy.request() 명령 실행 시 기본적으로 접근할 주소
+        specPattern: 'test/e2e/**/*.js', // 테스트 할 파일 경로 지정. (cypress/e2e/**/*.cy.{js,jsx,ts,tsx})
         supportFile: false, // 각 테스트 파일 수행 전 실행될 파일 경로 지정. 비활성화 시 false 값 입력 (cypress/support/e2e.{js,jsx,ts,tsx})
         // setupNodeEvents(on, config) {}, // 노드 이벤트를 등록하고 구성을 수정할 수 있는 기능
     },

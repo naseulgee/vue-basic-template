@@ -283,16 +283,18 @@ npm i -D cypress eslint-plugin-cypress
     "build": "webpack --mode production",
     "test:unit": "jest --watchAll",
     "test:unit:silent": "jest --watchAll --silent",
-    "test:e2e": "cypress open"
+    "test:e2e": "cypress open",
+    "test:e2e:headless": "cypress run"
 },
 ```
 
 ## 파일 및 폴더 생성
 1. test/e2e
 2. test/unit
-3. test/e2e or unit/테스트할 파일 경로/테스트 파일.test.js
-4. \__mocks\__/fileMock.js
-5. \__mocks\__/styleMock.js
+3. test/unit/테스트할 파일 경로/테스트 파일.test.js
+4. test/e2e/테스트 시나리오 파일.test.js
+5. \__mocks\__/fileMock.js
+6. \__mocks\__/styleMock.js
 </details>
 <!-- end  : ================================================================ -->
 
