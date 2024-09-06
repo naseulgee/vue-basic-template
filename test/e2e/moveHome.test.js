@@ -4,7 +4,7 @@
  * Sample 페이지로 접근한다
  * Home 네비게이션 버튼을 클릭한다
  * 메인 페이지에서 내용을 확인한다
- */
+*/
 
 describe('메인 페이지 이동', { testIsolation: false }, () => {
     const { baseUrl } = Cypress.config()
